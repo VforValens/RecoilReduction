@@ -1,4 +1,4 @@
-import { Config, IGlobals } from "@spt-aki/models/eft/common/IGlobals";
+import { IGlobals } from "@spt-aki/models/eft/common/IGlobals";
 import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 import { IPostDBLoadMod } from "@spt-aki/models/external/IPostDBLoadMod";
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
@@ -18,12 +18,12 @@ class ValensRecoilReduction implements IPostDBLoadMod
         this.globals = this.databaseServer.getTables().globals;
         
         const weapons: IDatabaseTables = this.weapons;
-        const globals: Config = this.globals.config;
+        const globals = this.globals.config.Aiming;
 
         for (const weapon in weapons) 
         {
             const weaponData: ITemplateItem = weapons[weapon];
-            if (weaponData._props.weapClass != null && weaponData._props.weapClass !== undefined)
+            if (weaponData?._props?.weapClass !== undefined)
             {
                 if (weaponData._props.weapClass !== "pistol") 
                 {
@@ -41,13 +41,13 @@ class ValensRecoilReduction implements IPostDBLoadMod
                 }
             }
         }
-        globals.Aiming.RecoilCrank = true;
-        globals.Aiming.AimProceduralIntensity = 0.63;
-        globals.Aiming.RecoilHandDamping = 0.40;
-        globals.Aiming.RecoilDamping = 0.45;
-        globals.Aiming.RecoilConvergenceMult *= 5.5;
-        globals.Aiming.RecoilVertBonus = 35;
-        globals.Aiming.RecoilBackBonus = 85;
+        globals.RecoilCrank = true;
+        globals.AimProceduralIntensity = 0.63;
+        globals.RecoilHandDamping = 0.40;
+        globals.RecoilDamping = 0.45;
+        globals.RecoilConvergenceMult *= 5.5;
+        globals.RecoilVertBonus = 35;
+        globals.RecoilBackBonus = 85;
     }
 }
 
