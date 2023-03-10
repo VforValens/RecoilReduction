@@ -2,21 +2,14 @@ import { Config, IGlobals } from "@spt-aki/models/eft/common/IGlobals";
 import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 import { IPostDBLoadMod } from "@spt-aki/models/external/IPostDBLoadMod";
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
-import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
-import { DependencyContainer } from "tsyringe";
 
 class ValensRecoilReduction implements IPostDBLoadMod
 {
     private weapons: IDatabaseTables;
     private globals: IGlobals;
-    private databaseServer: DatabaseServer;
 
-    public postDBLoad(container: DependencyContainer): void
+    public postDBLoad(): void
     {
-        this.databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
-        this.weapons = this.databaseServer.getTables().templates.items;
-        this.globals = this.databaseServer.getTables().globals;
-        
         const weapons: IDatabaseTables = this.weapons;
         const globals: Config = this.globals.config;
 
