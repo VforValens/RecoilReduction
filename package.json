@@ -1,8 +1,8 @@
 {
     "name": "Valens-RecoilReduction",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "main": "src/recoil.js",
-    "license": "CC BY-NC-SA 4.0",
+    "license": "CC BY-NC-ND 4.0",
     "author": "Valens",
     "akiVersion": ">=3.5.*",
     "scripts": {

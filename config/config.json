@@ -23,7 +23,7 @@
 
     "Secondary":
     {
-        "CameraRecoil": 0.20,
+        "CameraRecoil": 0.70,
         "CameraSnap": 3.45,
         "RecoilForceBack": 0.95,
         "RecoilForceUp": 0.95
