@@ -1,0 +1,31 @@
+{
+    "Enabled": true,
+
+    "Globals":
+    {
+        "AimProceduralIntensity": 0.66,
+        "RecoilBackBonus": 50,
+        "RecoilConvergenceMult": 3.75,
+        "RecoilCrank": true,
+        "RecoilDamping": 0.55,
+        "RecoilScaling": 0.95,
+        "RecoilHandDamping": 0.40,
+        "RecoilVertBonus": 30
+    },
+
+    "Primary":
+    {
+        "CameraRecoil": 0.69,
+        "CameraSnap": 3.45,
+        "RecoilForceBack": 0.99,
+        "RecoilForceUp": 0.99
+    },
+
+    "Secondary":
+    {
+        "CameraRecoil": 0.20,
+        "CameraSnap": 3.45,
+        "RecoilForceBack": 0.95,
+        "RecoilForceUp": 0.95
+    }
+}
